@@ -1,3 +1,6 @@
+-- Database Schema for Assessment Task 2
+-- This file defines the structure of the database
+
 CREATE DATABASE IF NOT EXISTS web_project_db;
 USE web_project_db;
 
