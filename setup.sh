@@ -4,7 +4,7 @@ echo "Starting Project Setup for Canteen PWA..."
 # Create directories
 while read -r line; do
     mkdir -p $line
-done < folders.txt
+done < folder.txt
 
 # Create files
 while read -r line; do

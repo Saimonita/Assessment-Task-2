@@ -54,16 +54,29 @@
         </div>
     </div>
 
-    <!-- 2. NEW CANTEEN CATALOGUE CONTAINER (Day 6 Update) -->
+    <!-- 2. NEW CANTEEN CATALOGUE CONTAINER (Day 6 & 7 Update) -->
     <div class="container mt-5">
         <h2 class="text-center mb-4">Canteen Catalogue</h2>
+        
+        <!-- Day 7: Catalogue Filtering Drop-down -->
+        <div class="row mb-4 justify-content-center">
+            <div class="col-md-6">
+                <select id="categoryFilter" class="form-select shadow-sm" aria-label="Filter by Department">
+                    <option value="All">All Departments</option>
+                    <option value="Hot Food">Hot Food</option>
+                    <option value="Beverages">Beverages</option>
+                    <option value="Snacks">Snacks</option>
+                </select>
+            </div>
+        </div>
+
         <!-- The JavaScript will inject the Bootstrap cards into this specific row -->
         <div id="catalogue-container" class="row">
             <p class="text-center text-muted">Loading delicious items...</p>
         </div>
     </div>
 
-    <!-- 3. JAVASCRIPT LINK (Crucial for Day 6) -->
+    <!-- 3. JAVASCRIPT LINK (Crucial for Day 6 & 7) -->
     <!-- This must go at the bottom of the body so the HTML loads before the script runs -->
     <script src="js/app.js"></script>
 
