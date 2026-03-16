@@ -11,74 +11,80 @@
 </head>
 <body class="bg-light p-5">
     
-    <!-- 1. EXISTING CONTACT FORM -->
-    <div class="container mb-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-
-                <!-- Bootstrap Card Form -->
-                <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
-                        <h4 class="mb-0">Contact Us</h4>
-                    </div>
-                    <div class="card-body">
-                        <!-- Points to your Server Script -->
-                        <form action="process_form.php" method="POST">
-                            
-                            <!-- Email Input -->
-                            <div class="mb-3">
-                                <label for="emailInput" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="emailInput" name="email" placeholder="name@example.com" required>
-                            </div>
-
-                            <!-- Subject Line -->
-                            <div class="mb-3">
-                                <label for="subjectInput" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subjectInput" name="subject" placeholder="How can we help?" required>
-                            </div>
-
-                            <!-- Message Area -->
-                            <div class="mb-3">
-                                <label for="messageInput" class="form-label">Message</label>
-                                <textarea class="form-control" id="messageInput" name="message" rows="3" required></textarea>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <button type="submit" class="btn btn-success w-100">Send Message</button>
-                            
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- 2. CANTEEN CATALOGUE CONTAINER (Updated with Correct DB Strings) -->
-    <div class="container mt-5">
-        <h2 class="text-center mb-4">Canteen Catalogue</h2>
+    <main> <!-- Added Main Landmark for Screen Readers -->
         
-        <!-- Updated Drop-down to match the Database exact strings -->
-        <div class="row mb-4 justify-content-center">
-            <div class="col-md-6">
-                <select id="categoryFilter" class="form-select shadow-sm" aria-label="Filter by Department">
-                    <option value="All">All Departments</option>
-                    <!-- The value must MATCH the database string perfectly -->
-                    <option value="Support">Support (Meals)</option>
-                    <option value="Sales">Sales (Drinks)</option>
-                    <option value="IT">IT (Snacks)</option>
-                </select>
+        <!-- 1. H1 for Accessibility (Hidden visually, read by screen readers) -->
+        <h1 class="text-center visually-hidden">Tupou College Canteen App</h1>
+
+        <!-- 2. EXISTING CONTACT FORM -->
+        <div class="container mb-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+
+                    <!-- Bootstrap Card Form -->
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <!-- Updated to h2 to fix sequential heading error -->
+                            <h2 class="mb-0 fs-4">Contact Us</h2> 
+                        </div>
+                        <div class="card-body">
+                            <!-- Points to your Server Script -->
+                            <form action="process_form.php" method="POST">
+                                
+                                <!-- Email Input -->
+                                <div class="mb-3">
+                                    <label for="emailInput" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="emailInput" name="email" placeholder="name@example.com" required>
+                                </div>
+
+                                <!-- Subject Line -->
+                                <div class="mb-3">
+                                    <label for="subjectInput" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subjectInput" name="subject" placeholder="How can we help?" required>
+                                </div>
+
+                                <!-- Message Area -->
+                                <div class="mb-3">
+                                    <label for="messageInput" class="form-label">Message</label>
+                                    <textarea class="form-control" id="messageInput" name="message" rows="3" required></textarea>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn btn-success w-100">Send Message</button>
+                                
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
 
-        <!-- The JavaScript will inject the Bootstrap cards into this specific row -->
-        <div id="catalogue-container" class="row">
-            <p class="text-center text-muted">Loading delicious items...</p>
-        </div>
-    </div>
+        <!-- 3. CANTEEN CATALOGUE CONTAINER -->
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Canteen Catalogue</h2>
+            
+            <!-- Updated Drop-down to match the Database exact strings -->
+            <div class="row mb-4 justify-content-center">
+                <div class="col-md-6">
+                    <select id="categoryFilter" class="form-select shadow-sm" aria-label="Filter by Department">
+                        <option value="All">All Departments</option>
+                        <option value="Support">Support (Meals)</option>
+                        <option value="Sales">Sales (Drinks)</option>
+                        <option value="IT">IT (Snacks)</option>
+                    </select>
+                </div>
+            </div>
 
-    <!-- 3. JAVASCRIPT LINK (Crucial for Client-Side Interactivity) -->
-    <!-- This must go at the bottom of the body so the HTML loads before the script runs -->
+            <!-- The JavaScript will inject the Bootstrap cards into this specific row -->
+            <div id="catalogue-container" class="row">
+                <p class="text-center text-muted">Loading delicious items...</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 4. JAVASCRIPT LINK -->
     <script src="js/app.js"></script>
 
 </body>

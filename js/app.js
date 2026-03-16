@@ -31,7 +31,7 @@ function fetchCatalogue() {
         });
 }
 
-// 5. The Filtering Algorithm (Outcome SE-12-08)
+// 5. The Filtering Algorithm 
 function filterCatalogue(category) {
     if (category === 'All') {
         renderCatalogue(globalCanteenData);
@@ -42,7 +42,7 @@ function filterCatalogue(category) {
     }
 }
 
-// 6. The UI Rendering Logic
+// 6. The UI Rendering Logic (Updated for Accessibility)
 function renderCatalogue(dataToRender) {
     const container = document.getElementById('catalogue-container');
     container.innerHTML = ''; // Clear the current grid before drawing new cards
@@ -59,10 +59,12 @@ function renderCatalogue(dataToRender) {
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm h-100">
                     <div class="card-header bg-success text-white">
-                        <h5 class="card-title mb-0">${item.department_name}</h5>
+                        <!-- Updated to h3 for sequential accessibility hierarchy -->
+                        <h3 class="card-title mb-0 fs-5">${item.department_name}</h3>
                     </div>
                     <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">${item.item_name}</h6>
+                        <!-- Updated to h4 for sequential accessibility hierarchy -->
+                        <h4 class="card-subtitle mb-2 text-muted fs-6">${item.item_name}</h4>
                         <p class="card-text fs-4 fw-bold">$${item.price}</p>
                         <button class="btn btn-outline-success w-100">Add to Order</button>
                     </div>
