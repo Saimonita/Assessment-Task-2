@@ -54,18 +54,19 @@
         </div>
     </div>
 
-    <!-- 2. NEW CANTEEN CATALOGUE CONTAINER (Day 6 & 7 Update) -->
+    <!-- 2. CANTEEN CATALOGUE CONTAINER (Updated with Correct DB Strings) -->
     <div class="container mt-5">
         <h2 class="text-center mb-4">Canteen Catalogue</h2>
         
-        <!-- Day 7: Catalogue Filtering Drop-down -->
+        <!-- Updated Drop-down to match the Database exact strings -->
         <div class="row mb-4 justify-content-center">
             <div class="col-md-6">
                 <select id="categoryFilter" class="form-select shadow-sm" aria-label="Filter by Department">
                     <option value="All">All Departments</option>
-                    <option value="Hot Food">Hot Food</option>
-                    <option value="Beverages">Beverages</option>
-                    <option value="Snacks">Snacks</option>
+                    <!-- The value must MATCH the database string perfectly -->
+                    <option value="Support">Support (Meals)</option>
+                    <option value="Sales">Sales (Drinks)</option>
+                    <option value="IT">IT (Snacks)</option>
                 </select>
             </div>
         </div>
@@ -76,7 +77,7 @@
         </div>
     </div>
 
-    <!-- 3. JAVASCRIPT LINK (Crucial for Day 6 & 7) -->
+    <!-- 3. JAVASCRIPT LINK (Crucial for Client-Side Interactivity) -->
     <!-- This must go at the bottom of the body so the HTML loads before the script runs -->
     <script src="js/app.js"></script>
 
